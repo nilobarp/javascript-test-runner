@@ -31,8 +31,8 @@ async function runTest (testName, rootPath, fileName, isDebug = false) {
             args: [
                 fileName,
                 testRunner === TestRunner.jest ? "--testNamePattern" : "--grep",
-                "--no-timeouts",
                 testName,
+                "--no-timeouts",
                 ...additionalArgs.split(' ')
             ],
             internalConsoleOptions: "openOnSessionStart"
