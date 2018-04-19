@@ -31,6 +31,7 @@ async function runTest (testName, rootPath, fileName, isDebug = false) {
             args: [
                 fileName,
                 testRunner === TestRunner.jest ? "--testNamePattern" : "--grep",
+                "--no-timeouts",
                 testName,
                 ...additionalArgs.split(' ')
             ],
